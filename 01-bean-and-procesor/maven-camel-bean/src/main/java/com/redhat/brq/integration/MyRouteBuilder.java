@@ -14,7 +14,7 @@ public class MyRouteBuilder extends RouteBuilder {
 
       // here is a sample which processes the input files
       // (leaving them in place - see the 'noop' flag)
-      // then performs content based routing on the message using XPath
+      // then processes the messages by MyBean's process method
          from("file:src/data?noop=true")
                .bean(new MyBean(), "process");
    }
